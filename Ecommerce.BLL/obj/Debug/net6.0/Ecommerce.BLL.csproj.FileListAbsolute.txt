@@ -1,0 +1,15 @@
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\bin\Debug\net6.0\Ecommerce.BLL.deps.json
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\bin\Debug\net6.0\Ecommerce.BLL.dll
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\bin\Debug\net6.0\Ecommerce.BLL.pdb
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\bin\Debug\net6.0\Ecommerce.DAL.dll
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\bin\Debug\net6.0\Ecommerce.DAL.pdb
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.csproj.AssemblyReference.cache
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.AssemblyInfoInputs.cache
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.AssemblyInfo.cs
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.csproj.CoreCompileInputs.cache
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.csproj.CopyComplete
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.dll
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\refint\Ecommerce.BLL.dll
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.pdb
+C:\Users\BisanCo\Desktop\Project\Ecommerce.BLL\obj\Debug\net6.0\ref\Ecommerce.BLL.dll
