@@ -9,73 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ecommerce.PL
 build_property.RootNamespace = Ecommerce.PL
-build_property.ProjectDir = C:\Users\BisanCo\Desktop\Project\Ecommerce\
+build_property.ProjectDir = D:\Project\Ecommerce\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\BisanCo\Desktop\Project\Ecommerce
+build_property.MSBuildProjectDirectory = D:\Project\Ecommerce
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Category/categoryProducts.cshtml]
+[D:/Project/Ecommerce/Views/Category/categoryProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcY2F0ZWdvcnlQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Category/Create.cshtml]
+[D:/Project/Ecommerce/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Category/Delete.cshtml]
+[D:/Project/Ecommerce/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Category/Index.cshtml]
+[D:/Project/Ecommerce/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Category/Update.cshtml]
+[D:/Project/Ecommerce/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Customer/CustomerProducts.cshtml]
+[D:/Project/Ecommerce/Views/Customer/CustomerProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJQcm9kdWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Customer/Index.cshtml]
+[D:/Project/Ecommerce/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Home/Index.cshtml]
+[D:/Project/Ecommerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Product/CustomersWhoByThisProduct.cshtml]
+[D:/Project/Ecommerce/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Ecommerce/Views/Product/CustomersWhoByThisProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDdXN0b21lcnNXaG9CeVRoaXNQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Product/Index.cshtml]
+[D:/Project/Ecommerce/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Ecommerce/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Shared/Error.cshtml]
+[D:/Project/Ecommerce/Views/Product/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/Ecommerce/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Shared/_Notification.cshtml]
+[D:/Project/Ecommerce/Views/Shared/_Notification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Project/Ecommerce/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/_ViewImports.cshtml]
+[D:/Project/Ecommerce/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/_ViewStart.cshtml]
+[D:/Project/Ecommerce/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/BisanCo/Desktop/Project/Ecommerce/Views/Shared/_Layout.cshtml]
+[D:/Project/Ecommerce/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sbjfbdmdt9

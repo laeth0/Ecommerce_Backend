@@ -42,7 +42,6 @@ namespace Ecommerce.PL.Controllers
                 categoryRepository.Add(category);
                 TempData["Message"] = "Category created successfully";
                 return RedirectToAction("Index");
-                TempData["Message"] = "Category created successfully";
             }
             TempData["Message"] = "Category  dont created ";
             return View(category);

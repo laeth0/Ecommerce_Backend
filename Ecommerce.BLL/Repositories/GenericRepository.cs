@@ -26,6 +26,7 @@ namespace Ecommerce.BLL
            return dbContext.Set<T>().ToList();
         }
 
+
         public int Add(T entity)
         {
             dbContext.Set<T>().Add(entity);

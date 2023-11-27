@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,10 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Ecommerce.DAL
-{
-    public class EcommerceDbContext:DbContext
+{    //  DbContext
+    public class EcommerceDbContext: IdentityDbContext<IdentityUser>
     {
-        public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options):base(options)
+        public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options) : base(options)
         {
         }
 

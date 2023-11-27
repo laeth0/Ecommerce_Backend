@@ -10,3 +10,15 @@ C:\Users\BisanCo\Desktop\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.dl
 C:\Users\BisanCo\Desktop\Project\Ecommerce.DAL\obj\Debug\net6.0\refint\Ecommerce.DAL.dll
 C:\Users\BisanCo\Desktop\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.pdb
 C:\Users\BisanCo\Desktop\Project\Ecommerce.DAL\obj\Debug\net6.0\ref\Ecommerce.DAL.dll
+D:\Project\Ecommerce.DAL\bin\Debug\net6.0\Ecommerce.DAL.deps.json
+D:\Project\Ecommerce.DAL\bin\Debug\net6.0\Ecommerce.DAL.dll
+D:\Project\Ecommerce.DAL\bin\Debug\net6.0\Ecommerce.DAL.pdb
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.csproj.AssemblyReference.cache
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.AssemblyInfoInputs.cache
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.AssemblyInfo.cs
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.csproj.CoreCompileInputs.cache
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.dll
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\refint\Ecommerce.DAL.dll
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.pdb
+D:\Project\Ecommerce.DAL\obj\Debug\net6.0\ref\Ecommerce.DAL.dll

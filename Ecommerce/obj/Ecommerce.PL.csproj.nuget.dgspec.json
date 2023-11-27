@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce\\Ecommerce.PL.csproj": {}
+    "D:\\Project\\Ecommerce\\Ecommerce.PL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj": {
+    "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
+        "projectUniqueName": "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
         "projectName": "Ecommerce.BLL",
-        "projectPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
+        "projectPath": "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
         "packagesPath": "C:\\Users\\BisanCo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\obj\\",
+        "outputPath": "D:\\Project\\Ecommerce.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
-                "projectPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj"
+              "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
+                "projectPath": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
+    "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
+        "projectUniqueName": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
         "projectName": "Ecommerce.DAL",
-        "projectPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
+        "projectPath": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
         "packagesPath": "C:\\Users\\BisanCo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.DAL\\obj\\",
+        "outputPath": "D:\\Project\\Ecommerce.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,6 +109,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.25, )"
@@ -138,14 +142,14 @@
         }
       }
     },
-    "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce\\Ecommerce.PL.csproj": {
+    "D:\\Project\\Ecommerce\\Ecommerce.PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce\\Ecommerce.PL.csproj",
+        "projectUniqueName": "D:\\Project\\Ecommerce\\Ecommerce.PL.csproj",
         "projectName": "Ecommerce.PL",
-        "projectPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce\\Ecommerce.PL.csproj",
+        "projectPath": "D:\\Project\\Ecommerce\\Ecommerce.PL.csproj",
         "packagesPath": "C:\\Users\\BisanCo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce\\obj\\",
+        "outputPath": "D:\\Project\\Ecommerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -167,8 +171,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj": {
-                "projectPath": "C:\\Users\\BisanCo\\Desktop\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj"
+              "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj": {
+                "projectPath": "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj"
               }
             }
           }
