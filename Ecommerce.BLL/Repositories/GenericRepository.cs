@@ -1,13 +1,10 @@
-﻿using Ecommerce.BLL;
-using Ecommerce.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ecommerce.DAL;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.BLL
 {
+
+
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly EcommerceDbContext dbContext;
@@ -23,28 +20,31 @@ namespace Ecommerce.BLL
 
         public IEnumerable<T> GetAll()
         {
+            if (typeof(T) == typeof(Product))
+            {
+                return (IEnumerable<T>) dbContext.Products.Include(p => p.Category).ToList();
+            }
            return dbContext.Set<T>().ToList();
         }
 
 
-        public int Add(T entity)
+        public void Add(T entity)
         {
             dbContext.Set<T>().Add(entity);
-            return dbContext.SaveChanges();  
          
         }
 
-        public int Delete(T entity)
+        public void Delete(T entity)
         {
             dbContext.Set<T>().Remove(entity);
-            return dbContext.SaveChanges();
         }
 
 
-        public int Update(T entity)
+        public void Update(T entity)
         {
             dbContext.Set<T>().Update(entity);
-            return dbContext.SaveChanges();
         }
+
+    
     }
 }

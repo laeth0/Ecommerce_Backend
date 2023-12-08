@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Ecommerce.DAL
 {
@@ -14,16 +10,16 @@ namespace Ecommerce.DAL
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
 
-        [Required(ErrorMessage ="User name is Reauired")]
+        [Required]
         public string CustomerName { get; set; }
 
-        [Required(ErrorMessage = "User Email is Required")]
+        [Required]
         public string CustomerEmail { get; set; }
 
-        [Required(ErrorMessage = "User Password is Required")]
+        [Required]
         public string CustomerPassword { get; set; }
 
-        [Required(ErrorMessage = "User Phone is Required")]
+        [Required]
         public string CustomerPhone { get; set; }
 
         public ICollection<Product> Products { get; set; }

@@ -14,5 +14,7 @@ namespace Ecommerce.BLL
         {
             return dbContext.Products.Where(p => p.CategoryId == id).ToList();
         }
+
+    
     }
 }

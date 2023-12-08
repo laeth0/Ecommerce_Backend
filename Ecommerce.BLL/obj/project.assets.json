@@ -2109,11 +2109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
       "projectName": "Ecommerce.BLL",
-      "projectPath": "D:\\Project\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
+      "projectPath": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.BLL\\Ecommerce.BLL.csproj",
       "packagesPath": "C:\\Users\\BisanCo\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\Ecommerce.BLL\\obj\\",
+      "outputPath": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2128,15 +2128,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
-              "projectPath": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj"
+            "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
+              "projectPath": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj"
             }
           }
         }

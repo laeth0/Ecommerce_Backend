@@ -1,11 +1,7 @@
 ﻿using Ecommerce.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ecommerce.BLL.Repositories
+
+namespace Ecommerce.BLL
 {
     public class CustomerRepository : GenericRepository<Customer>, ICustomerRepository
     {

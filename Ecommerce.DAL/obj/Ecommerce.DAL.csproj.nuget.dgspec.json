@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {}
+    "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {}
   },
   "projects": {
-    "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
+    "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
         "projectName": "Ecommerce.DAL",
-        "projectPath": "D:\\Project\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
+        "projectPath": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\Ecommerce.DAL.csproj",
         "packagesPath": "C:\\Users\\BisanCo\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\Ecommerce.DAL\\obj\\",
+        "outputPath": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
