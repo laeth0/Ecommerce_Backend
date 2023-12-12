@@ -12,14 +12,17 @@ namespace Ecommerce.PL
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
             builder.Services.AddDbContext<EcommerceDbContext>(options=>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            options.UseLazyLoadingProxies()
+            .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //builder.Services.AddScoped<IProductRepository, ProductRepository>();
             //builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
             //builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
-            builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWrok));
+            builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
             //services of lifetime for dependency injection
             //AddScoped => the object will be created when the request is created and when the request is finished the object will be destroyed

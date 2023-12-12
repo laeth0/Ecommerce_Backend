@@ -28,19 +28,6 @@ namespace Ecommerce.PL
             return View(mappedProducts);
         }
 
-
-        // show customers who by the product 
-        public IActionResult CustomersWhoByThisProduct(int productId)
-        {
-            var product = unitOfWork.ProductRepository.GetById(productId);
-            if (product == null) return NotFound();
-            var customers = unitOfWork.ProductRepository.CustomersWhoByThisProduct(product);
-            if (customers == null) return NotFound();
-            var mappedCustomers = mapper.Map< IEnumerable<Customer>, IEnumerable<CustomerViewModel> >(customers);
-            return View(mappedCustomers);
-        }
-
-
         // create category
         [HttpGet]
         public IActionResult Create()
@@ -82,7 +69,6 @@ namespace Ecommerce.PL
         [HttpGet]
         public IActionResult Update(int id)
         {
-
             if (id == 0) return BadRequest();
 
             Product product = unitOfWork.ProductRepository.GetById(id);
@@ -91,6 +77,7 @@ namespace Ecommerce.PL
             IEnumerable<Category> categories = unitOfWork.CategoryRepository.GetAll();
             SelectList selectListItems = new SelectList(categories, "CategoryId", "CategoryName");
             ViewBag.Categories = selectListItems;
+            ViewBag.ProductCategorieName = product.Category.CategoryName;
 
             var mappedProduct = mapper.Map<Product, ProductViewModel>(product);
             return View(mappedProduct);
@@ -101,6 +88,7 @@ namespace Ecommerce.PL
         {
             if (ModelState.IsValid)// ModelState is a my model (the class) and IsValid is a property
             {
+                productVM.ImageURL = FileManagement.UploadFile(productVM.Image, "images");
                 var mappedProduct = mapper.Map<ProductViewModel, Product>(productVM);
                 unitOfWork.ProductRepository.Update(mappedProduct);
                 unitOfWork.Save();
@@ -120,18 +108,13 @@ namespace Ecommerce.PL
             if (id == 0) return BadRequest();
             Product product = unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
-
-            IEnumerable<Category> categories = unitOfWork.CategoryRepository.GetAll();
-            SelectList selectListItems = new SelectList(categories, "CategoryId", "CategoryName");
-            ViewBag.Categories = selectListItems;
-
             var mappedProduct = mapper.Map<Product, ProductViewModel>(product);
             return View(mappedProduct);
         }
 
 
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteCategories(int id)
+        public IActionResult DeleteProduct(int id)
         {
             Product product = unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
@@ -139,6 +122,20 @@ namespace Ecommerce.PL
             unitOfWork.Save();
             TempData["Message"] = "Category deleted successfully";
             return RedirectToAction(nameof(Index));
+        }
+
+
+        // show customers who by the product 
+        [HttpGet]
+        public IActionResult CustomersWhoByThisProduct(int productId)
+        {
+            var product = unitOfWork.ProductRepository.GetById(productId);
+            if (product == null) return NotFound();
+            var customers = product.Customers;
+            if (customers == null) return NotFound();
+            ViewBag.ProductName = product.ProductName;
+            var mappedCustomers = mapper.Map<IEnumerable<Customer>, IEnumerable<CustomerViewModel>>(customers);
+            return View(mappedCustomers);
         }
 
 

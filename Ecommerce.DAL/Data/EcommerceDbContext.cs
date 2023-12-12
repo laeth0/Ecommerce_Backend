@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.DAL
 {    //  DbContext
-    public class EcommerceDbContext: IdentityDbContext<IdentityUser>
+    public class EcommerceDbContext:DbContext
     {
         public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options) : base(options)
         {
@@ -13,7 +13,6 @@ namespace Ecommerce.DAL
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
-            
         //}
      
 

@@ -18,16 +18,16 @@ namespace Ecommerce.PL
 
         public string? ImageURL { get; set; }
 
-        public IFormFile Image { get; set; } 
+        public IFormFile? Image { get; set; } 
 
         [Required(ErrorMessage = "Product Category is Required")]
         [ForeignKey("Category")]
         [DisplayName("Category")]
         public int CategoryId { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category? Category { get; set; }
 
-        public ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<Customer>? Customers { get; set; }
     }
 
 }

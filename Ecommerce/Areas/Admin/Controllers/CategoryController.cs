@@ -27,11 +27,13 @@ namespace Ecommerce.PL
         }
 
         //Show category products
-        public IActionResult categoryProducts(int id)
+        public IActionResult categoryProducts(int CategoryId)
         {
-            var products = unitOfWork.CategoryRepository.GetCategoryProducts(id);
+            IEnumerable<Product> products = unitOfWork.CategoryRepository.GetCategoryProducts(CategoryId);
             if (products == null) return BadRequest();
-            var mappedProducts = mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(products);
+            var mappedProducts = mapper.Map< IEnumerable<Product> , IEnumerable<ProductViewModel> >(products);
+            var CategoryName = unitOfWork.CategoryRepository.GetById(CategoryId).CategoryName;
+            ViewBag.CategoryName = CategoryName;
             return View(mappedProducts);
         }
 
@@ -54,7 +56,7 @@ namespace Ecommerce.PL
                 TempData["Message"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
-            TempData["Message"] = "Category  dont created ";
+            TempData["Message"] = "Category dont created";
             return View(categoryVM);
         }
 
@@ -77,7 +79,7 @@ namespace Ecommerce.PL
         {
             if (ModelState.IsValid)// ModelState is a my model (the class) and IsValid is a property
             {
-                var mappedCategory = mapper.Map<CategoryViewModel, Category>(categoryVM);
+                Category mappedCategory = mapper.Map<CategoryViewModel, Category>(categoryVM);
                 unitOfWork.CategoryRepository.Update(mappedCategory);
                 unitOfWork.Save();
                 TempData["Message"] = "Category updated successfully";

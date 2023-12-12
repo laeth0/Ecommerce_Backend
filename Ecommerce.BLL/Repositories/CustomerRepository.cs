@@ -12,9 +12,6 @@ namespace Ecommerce.BLL
         }
 
 
-        public IEnumerable<Product> GetCustomerProducts(Customer customer)
-        {   
-            return customer.Products.ToList();
-        }
+     
     }
 }

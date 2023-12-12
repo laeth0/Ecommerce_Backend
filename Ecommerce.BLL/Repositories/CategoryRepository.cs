@@ -1,4 +1,6 @@
 ﻿using Ecommerce.DAL;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Ecommerce.BLL
 {
@@ -10,9 +12,10 @@ namespace Ecommerce.BLL
             dbContext = context;
         }
 
-        public IEnumerable<Product> GetCategoryProducts(int id)
+        public IEnumerable<Product> GetCategoryProducts(int Category_id)
         {
-            return dbContext.Products.Where(p => p.CategoryId == id).ToList();
+            return dbContext.Categories.FirstOrDefault(c => c.CategoryId == Category_id).Products;
+
         }
 
     

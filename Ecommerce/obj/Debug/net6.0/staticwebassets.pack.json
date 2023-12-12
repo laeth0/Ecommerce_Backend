@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png",
+      "PackagePath": "staticwebassets\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png"
+    },
+    {
       "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

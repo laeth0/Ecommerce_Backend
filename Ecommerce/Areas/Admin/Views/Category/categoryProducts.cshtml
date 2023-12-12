@@ -1,5 +1,42 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<ProductViewModel>
 @{
+    ViewData["Title"] = "Index";
+        
+}
+
+@if (Model.Count() > 0)
+{
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Product for @ViewBag.CategoryName Category</h1>
+        <a asp-action="Create" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i>Create Product</a>
+    </div>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Edit and Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.ProductId" class="btn btn-info mx-2"> Edit </a>
+                    <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-danger"> Delete </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <div class="d-flex justify-content-between">
+        <div class="text-danger">there is no Categories</div>
+        <a asp-action="Create" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i> Create Product</a>
+    </div>
 }

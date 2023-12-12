@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3LDWl3yO22orpDgRrS4KgktmDyfZfExxNbOiilAqDvA=",
+  "Hash": "5PJkOK0Aw9OZNM14v7xpCPzV/K5i0G5jXKGTzvtDtZ0=",
   "Source": "Ecommerce.PL",
   "BasePath": "_content/Ecommerce.PL",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png",
+      "SourceId": "Ecommerce.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
+      "BasePath": "_content/Ecommerce.PL",
+      "RelativePath": "files/images/6e2ed842-f565-4607-b08f-e0052f2d3a93download.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png"
     },
     {
       "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\site.js",

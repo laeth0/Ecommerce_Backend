@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "Update";
 }
-
 <form method="post">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
@@ -10,6 +9,11 @@
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            @* <label asp-for="CategoryId" class="p-0 mb-3"></label> *@
+            <input asp-for="CategoryId" class="form-control" type="hidden" />
+            @* <span asp-validation-for="CategoryId" class="text-danger"></span> *@
+        </div>
         <div class="mb-3 row p-1">
             <label asp-for="CategoryName" class="p-0 mb-3"></label>
             <input asp-for="CategoryName" class="form-control" />

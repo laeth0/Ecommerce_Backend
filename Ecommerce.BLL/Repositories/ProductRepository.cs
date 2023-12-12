@@ -12,11 +12,7 @@ namespace Ecommerce.BLL
             dbContext = context;
         }
 
-        public IEnumerable<Customer> CustomersWhoByThisProduct(Product product)
-        {
-            var customers = product.Customers;
-            return customers;
-        }
+  
     
     }
 

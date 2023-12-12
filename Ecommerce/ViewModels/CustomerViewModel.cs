@@ -22,7 +22,7 @@ namespace Ecommerce.PL
         [Required(ErrorMessage = "User Phone is Required")]
         public string CustomerPhone { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product>? Products { get; set; }
 
     }
 }

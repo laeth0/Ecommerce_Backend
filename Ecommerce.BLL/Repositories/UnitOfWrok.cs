@@ -3,14 +3,14 @@
 
 namespace Ecommerce.BLL
 {
-    public class UnitOfWrok : IUnitOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         public ICategoryRepository CategoryRepository { get; set; }
         public IProductRepository ProductRepository { get; set; }
         public ICustomerRepository CustomerRepository { get; set; }
 
         public readonly EcommerceDbContext dbContext;
-        public UnitOfWrok(EcommerceDbContext dbContext)
+        public UnitOfWork(EcommerceDbContext dbContext)
         {
             CategoryRepository = new CategoryRepository(dbContext);
             ProductRepository = new ProductRepository(dbContext);

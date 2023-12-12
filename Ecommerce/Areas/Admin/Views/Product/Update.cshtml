@@ -1,5 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ProductViewModel
 @{
+    ViewData["Title"] = "Update";
 }
+<form method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Update Category</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            @* <label asp-for="CategoryId" class="p-0 mb-3"></label> *@
+            <input asp-for="ProductId" class="form-control" type="hidden" />
+            @* <span asp-validation-for="CategoryId" class="text-danger"></span> *@
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="ProductName" class="p-0 mb-3"></label>
+            <input asp-for="ProductName" class="form-control" />
+            <span asp-validation-for="ProductName" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="CategoryId" class="p-0 mb-3"></label>
+            <select asp-for="CategoryId" class="form-control" asp-items="@ViewBag.Categories">
+                <option selected disabled>@ViewBag.ProductCategorieName</option>
+            </select>
+        </div>
+        <div class="mb-3 row p-1">
+            <div class="mb-3 row p-1">
+                <label asp-for="Image" class="p-0 mb-3"></label>
+                <input asp-for="Image" class="form-control"  /> 
+                <img src="" height="200" width="100" alt="img alt" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Edit</button>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-success border form-control">
+                    Back to List
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

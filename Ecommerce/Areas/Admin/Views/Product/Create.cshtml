@@ -25,7 +25,8 @@
         <div class="mb-3 row p-1">
             <div class="mb-3 row p-1">
                 <label asp-for="Image" class="p-0 mb-3"></label>
-                <input asp-for="Image" class="form-control" />
+                <input asp-for="Image" class="form-control" /> @* onchange="loadFile(event)" *@
+                @* <img id="myImg" height="200" width="100" hidden />  *@
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
         </div>
@@ -47,4 +48,31 @@
 </form>
 
 
+@* @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
 
+        function loadFile (event) {
+            let reader = new FileReader();
+
+            reader.onload = function () {
+                let myImg = document.getElementById('myImg');
+                myImg.src = reader.result;
+                myImg.hidden = false;
+            };
+
+        };
+
+        // function readURL(input) {
+        //     if (input.files && input.files[0]) {
+        //         var reader = new FileReader();
+        //         reader.onload = function (e) {
+        //             $('#myImc').attr('src', e.target.result);
+        //         }
+        //         reader.readAsDataURL(input.files[0]);
+        //     }
+        // }
+
+
+    </script>
+} *@ 

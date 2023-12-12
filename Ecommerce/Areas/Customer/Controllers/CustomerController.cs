@@ -23,7 +23,7 @@ namespace Ecommerce.PL
         {
             var customer = unitOfWork.CustomerRepository.GetById(id);
             if (customer is null) return NotFound();
-            var products = unitOfWork.CustomerRepository.GetCustomerProducts(customer);
+            var products = customer.Products;
             return View(products);
         }
 
