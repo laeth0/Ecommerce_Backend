@@ -88,7 +88,15 @@ namespace Ecommerce.PL
         {
             if (ModelState.IsValid)// ModelState is a my model (the class) and IsValid is a property
             {
-                productVM.ImageURL = FileManagement.UploadFile(productVM.Image, "images");
+                //productVM.ImageURL = FileManagement.UploadFile(productVM.Image, "images");
+                if (productVM.Image != null)
+                {
+                    if ( !string.IsNullOrEmpty(productVM.ImageURL) )
+                        FileManagement.DeleteFile(productVM.ImageURL, "images");
+
+                    productVM.ImageURL = FileManagement.UploadFile(productVM.Image, "images");
+                }
+
                 var mappedProduct = mapper.Map<ProductViewModel, Product>(productVM);
                 unitOfWork.ProductRepository.Update(mappedProduct);
                 unitOfWork.Save();
@@ -98,7 +106,6 @@ namespace Ecommerce.PL
             }
             return View(productVM);
         }
-
 
 
         // delete category
@@ -138,6 +145,11 @@ namespace Ecommerce.PL
             return View(mappedCustomers);
         }
 
-
+        [HttpGet]
+        public IActionResult getAll()
+        {
+            var products = unitOfWork.ProductRepository.GetAll();
+            return Json(new { data = products });
+        }
     }
 }

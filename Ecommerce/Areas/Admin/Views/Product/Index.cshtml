@@ -3,6 +3,54 @@
     ViewData["Title"] = "Index";
 }
 
+<div class="d-flex justify-content-between pt-4 pb-3">
+    <h1 class="text-primary">Products List</h1>
+
+    <a asp-controller="product" asp-action="create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i>
+        Create New Product
+    </a>
+</div>
+
+@if (Model.Count()>0)
+{
+    <table id="DT_load" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Category Name</th>
+                <th>Edit and Delete</th>
+            </tr>
+        </thead>
+ 
+    </table>
+}
+else
+{
+    <div class="bg-warning mt-3">
+        <h2>No Products</h2>
+    </div>
+}
+
+
+@section Scripts{
+    <script src="~/js/Product.js"></script>
+    <script>
+        $(document).ready(function () {
+            loadDataTable()
+         })
+    </script>
+}
+
+
+
+@* @model IEnumerable<ProductViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
 @if (Model.Count() > 0)
 {
     <div class="d-flex justify-content-between align-items-center">
@@ -26,7 +74,16 @@
 
                 <td>@item.ProductId</td>
                 <td>@item.ProductName</td>
-                <td>product img</td>
+                <td>
+                    @if(!string.IsNullOrEmpty(item.ImageURL))
+                    {
+                        <img src="~/files/images/@item.ImageURL" width="100" height="100" />
+                    }
+                    else
+                    {
+                        <span>there is no image for this product</span>
+                    }
+                </td>
                 <td>@item.Category.CategoryName</td>
                 <td>
                     <a asp-action="Update" asp-route-id="@item.ProductId" class="btn btn-info mx-2"> Edit </a>
@@ -47,3 +104,5 @@ else
         <a asp-action="Create" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i> Create Product</a>
     </div>
 }
+ 
+*@

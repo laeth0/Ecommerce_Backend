@@ -27,7 +27,15 @@
 
 
             file.CopyTo(FileStream);
-            return FolderName;
+            return FileName;
         }   
+
+
+
+        public static void DeleteFile(string FileName,string FolderName)
+        {
+            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\files", FolderName,FileName);
+            if (File.Exists(imagePath) )  File.Delete(imagePath);
+        }
     }
 }

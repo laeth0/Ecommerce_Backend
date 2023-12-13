@@ -13,8 +13,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png",
-      "PackagePath": "staticwebassets\\files\\images\\6e2ed842-f565-4607-b08f-e0052f2d3a93download.png"
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\83ce0544-fc7d-45c4-b60a-65350589fcdfQuality.jpg",
+      "PackagePath": "staticwebassets\\files\\images\\83ce0544-fc7d-45c4-b60a-65350589fcdfQuality.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\8c50f207-5081-47d4-b500-c5161488365atest.jpg",
+      "PackagePath": "staticwebassets\\files\\images\\8c50f207-5081-47d4-b500-c5161488365atest.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\90f48dbc-7260-484c-b23e-c2d35ec9a6c0game.jpg",
+      "PackagePath": "staticwebassets\\files\\images\\90f48dbc-7260-484c-b23e-c2d35ec9a6c0game.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\a8118646-49d5-4c9e-85a7-f182df59fa5edownload.png",
+      "PackagePath": "staticwebassets\\files\\images\\a8118646-49d5-4c9e-85a7-f182df59fa5edownload.png"
+    },
+    {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\f835e88c-cacd-4042-8a31-5c4af973772elaod.jpg",
+      "PackagePath": "staticwebassets\\files\\images\\f835e88c-cacd-4042-8a31-5c4af973772elaod.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
     },
     {
       "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\site.js",

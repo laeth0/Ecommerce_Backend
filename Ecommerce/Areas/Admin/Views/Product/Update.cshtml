@@ -28,9 +28,13 @@
         <div class="mb-3 row p-1">
             <div class="mb-3 row p-1">
                 <label asp-for="Image" class="p-0 mb-3"></label>
-                <input asp-for="Image" class="form-control"  /> 
-                <img src="" height="200" width="100" alt="img alt" />
+                <input asp-for="Image" class="form-control" />
                 <span asp-validation-for="Image" class="text-danger"></span>
+                @if (!string.IsNullOrEmpty(Model.ImageURL))
+                {
+                    <img src="~/files/images/@Model.ImageURL" class="w-25 m-auto img-fluid mt-4" height="200" width="100" alt="Product image" />
+                    <input type="hidden" asp-for="ImageURL" value="@Model.ImageURL" />
+                }
             </div>
         </div>
         <div class="row">
