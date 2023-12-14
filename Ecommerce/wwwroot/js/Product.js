@@ -1,9 +1,9 @@
 ﻿function loadDataTable() {
-    let dataTable = $('#DT_load').DataTable({
+    let dataTable = $('#DT_load').dataTable({
         "ajax": {
-            "url": "Admin/Product/getAll",
+            "url": "Product/getall",
             "type": "GET",
-            "datatype": "Json",
+            "datatype": "json",
             contentType: "application/json",
         },
         "columns": [
@@ -15,10 +15,10 @@
                 data: "ProductId",
                 render: function (data, type, row) {
                   
-                    return `<a href="Admin/Product/Update/${data.ProductId}" class="btn btn-info mx-2" >
+                    return `<a href="/Admin/Product/Update/${data.ProductId}" class="btn btn-info mx-2" >
                                 <i class="far fa-edit"></i> Edit
                             </a>
-                            <a onclick=Delete("/Admin/Product/Delete/${data.ProductId}") class="btn btn-danger" >
+                            <a href="/Admin/Product/Delete/${data.ProductId}" class="btn btn-danger" >
                                 <i class="far fa-trash-alt"></i> Delete
                             </a>`;
                 }

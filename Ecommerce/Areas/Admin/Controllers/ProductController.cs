@@ -146,7 +146,7 @@ namespace Ecommerce.PL
         }
 
         [HttpGet]
-        public IActionResult getAll()
+        public IActionResult getall()
         {
             var products = unitOfWork.ProductRepository.GetAll();
             return Json(new { data = products });
