@@ -3,6 +3,8 @@ using Ecommerce.BLL;
 using Ecommerce.DAL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Ecommerce.PL
 {
@@ -145,11 +147,30 @@ namespace Ecommerce.PL
             return View(mappedCustomers);
         }
 
+        /* [HttpGet]
+         public IActionResult getall()
+         {
+             var products = unitOfWork.ProductRepository.GetAll();
+             return Json(new { data = products });
+         } */
         [HttpGet]
-        public IActionResult getall()
+        public IActionResult getAll()
         {
             var products = unitOfWork.ProductRepository.GetAll();
-            return Json(new { data = products });
+
+            // Create Json Serialize Options with ReferenceHandler.Preserve
+            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                // Other options as needed
+            };
+
+            // Serialize the data using JsonSerializerOptions
+            var jsonData = JsonSerializer.Serialize(new { data = products }, jsonSerializerOptions);
+            return Content(jsonData, "application/json");
         }
+
+
+
     }
 }
