@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProductViewModel>
+﻿@* @model IEnumerable<ProductViewModel>
 @{
     ViewData["Title"] = "Index";
 }
@@ -19,9 +19,9 @@
             <tr>
                 <th>Product ID</th>
                 <th>Product Name</th>
-                @* <th>Product Image</th> *@
+                @* <th>Product Image</th> 
                 <th>Category Name</th>
-                @* <th>Edit and Delete</th> *@
+                @* <th>Edit and Delete</th> 
             </tr>
         </thead>
  
@@ -42,11 +42,11 @@ else
             loadDataTable()
          })
     </script>
-}
+} *@
 
 
 
-@* @model IEnumerable<ProductViewModel>
+@model IEnumerable<ProductViewModel>
 @{
     ViewData["Title"] = "Index";
 }
@@ -104,5 +104,3 @@ else
         <a asp-action="Create" class="btn btn-outline-success"><i class="bi bi-plus-circle"></i> Create Product</a>
     </div>
 }
- 
-*@

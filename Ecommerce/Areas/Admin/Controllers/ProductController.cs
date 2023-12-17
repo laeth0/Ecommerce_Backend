@@ -128,6 +128,7 @@ namespace Ecommerce.PL
             Product product = unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
             unitOfWork.ProductRepository.Delete(product);
+            FileManagement.DeleteFile(product.ImageURL, "images");
             unitOfWork.Save();
             TempData["Message"] = "Category deleted successfully";
             return RedirectToAction(nameof(Index));

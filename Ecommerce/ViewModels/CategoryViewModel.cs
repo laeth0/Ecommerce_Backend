@@ -15,7 +15,7 @@ namespace Ecommerce.PL
         [DisplayName("Category Name")]//show in the label in html page
         public string CategoryName { get; set; }
 
-        public virtual ICollection<Product>? Products { get; set; }
+        public virtual ICollection<Product>? Products { get; set; } = new HashSet<Product>();
 
 
     }

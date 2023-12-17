@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NDKr/HJ+95Rib70pFv6oNqX0fW+Zd3PZx+awfEKR2b4=",
+  "Hash": "Pmh5qYLlYAX5STFmARVQd5cNoC5NzGl73XXLtMKZpu8=",
   "Source": "Ecommerce.PL",
   "BasePath": "_content/Ecommerce.PL",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\83ce0544-fc7d-45c4-b60a-65350589fcdfQuality.jpg",
+      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\345ecb44-f5b1-4692-814a-f963cf7fb4f9test.jpg",
       "SourceId": "Ecommerce.PL",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
       "BasePath": "_content/Ecommerce.PL",
-      "RelativePath": "files/images/83ce0544-fc7d-45c4-b60a-65350589fcdfQuality.jpg",
+      "RelativePath": "files/images/345ecb44-f5b1-4692-814a-f963cf7fb4f9test.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\images\\83ce0544-fc7d-45c4-b60a-65350589fcdfQuality.jpg"
+      "OriginalItemSpec": "wwwroot\\files\\images\\345ecb44-f5b1-4692-814a-f963cf7fb4f9test.jpg"
     },
     {
-      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\8c50f207-5081-47d4-b500-c5161488365atest.jpg",
+      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\6a23df8f-74cd-412d-88d1-f6f936ed21c2product.jpg",
       "SourceId": "Ecommerce.PL",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
       "BasePath": "_content/Ecommerce.PL",
-      "RelativePath": "files/images/8c50f207-5081-47d4-b500-c5161488365atest.jpg",
+      "RelativePath": "files/images/6a23df8f-74cd-412d-88d1-f6f936ed21c2product.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\images\\8c50f207-5081-47d4-b500-c5161488365atest.jpg"
+      "OriginalItemSpec": "wwwroot\\files\\images\\6a23df8f-74cd-412d-88d1-f6f936ed21c2product.jpg"
     },
     {
-      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\90f48dbc-7260-484c-b23e-c2d35ec9a6c0game.jpg",
+      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\7d13385e-2ef2-49f1-a9ec-3ebd22421324additionals.jpg",
       "SourceId": "Ecommerce.PL",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
       "BasePath": "_content/Ecommerce.PL",
-      "RelativePath": "files/images/90f48dbc-7260-484c-b23e-c2d35ec9a6c0game.jpg",
+      "RelativePath": "files/images/7d13385e-2ef2-49f1-a9ec-3ebd22421324additionals.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\images\\90f48dbc-7260-484c-b23e-c2d35ec9a6c0game.jpg"
+      "OriginalItemSpec": "wwwroot\\files\\images\\7d13385e-2ef2-49f1-a9ec-3ebd22421324additionals.jpg"
     },
     {
-      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\a8118646-49d5-4c9e-85a7-f182df59fa5edownload.png",
+      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\bc222ffa-244f-415b-92ab-9e05ecb66e85images.jpg",
       "SourceId": "Ecommerce.PL",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
       "BasePath": "_content/Ecommerce.PL",
-      "RelativePath": "files/images/a8118646-49d5-4c9e-85a7-f182df59fa5edownload.png",
+      "RelativePath": "files/images/bc222ffa-244f-415b-92ab-9e05ecb66e85images.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,24 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\images\\a8118646-49d5-4c9e-85a7-f182df59fa5edownload.png"
-    },
-    {
-      "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\f835e88c-cacd-4042-8a31-5c4af973772elaod.jpg",
-      "SourceId": "Ecommerce.PL",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\",
-      "BasePath": "_content/Ecommerce.PL",
-      "RelativePath": "files/images/f835e88c-cacd-4042-8a31-5c4af973772elaod.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\files\\images\\f835e88c-cacd-4042-8a31-5c4af973772elaod.jpg"
+      "OriginalItemSpec": "wwwroot\\files\\images\\bc222ffa-244f-415b-92ab-9e05ecb66e85images.jpg"
     },
     {
       "Identity": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\Product.js",
