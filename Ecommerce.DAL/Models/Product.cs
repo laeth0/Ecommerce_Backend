@@ -24,6 +24,5 @@ namespace Ecommerce.DAL
 
         public virtual Category? Category { get; set; }
 
-        public virtual ICollection<Customer>? Customers { get; set; }
     }
 }

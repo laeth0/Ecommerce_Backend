@@ -4,11 +4,11 @@ namespace Ecommerce.BLL
 {
     public interface IGenericRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAll();
 
-        T GetById(int id);
+        Task<T> GetById(int id);
 
-        void Add(T entity);
+        Task Add(T entity);
 
         void Update(T entity);
 

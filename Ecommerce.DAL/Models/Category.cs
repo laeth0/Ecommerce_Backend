@@ -15,7 +15,5 @@ namespace Ecommerce.DAL
 
         public virtual ICollection<Product>? Products { get; set; } =new HashSet<Product>();
 
-
-
     }
 }

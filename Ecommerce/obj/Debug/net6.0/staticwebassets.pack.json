@@ -5,28 +5,16 @@
       "PackagePath": "staticwebassets\\Ecommerce.PL.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\css\\SecurityStyle.css",
+      "PackagePath": "staticwebassets\\css\\SecurityStyle.css"
+    },
+    {
       "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\345ecb44-f5b1-4692-814a-f963cf7fb4f9test.jpg",
-      "PackagePath": "staticwebassets\\files\\images\\345ecb44-f5b1-4692-814a-f963cf7fb4f9test.jpg"
-    },
-    {
-      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\6a23df8f-74cd-412d-88d1-f6f936ed21c2product.jpg",
-      "PackagePath": "staticwebassets\\files\\images\\6a23df8f-74cd-412d-88d1-f6f936ed21c2product.jpg"
-    },
-    {
-      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\7d13385e-2ef2-49f1-a9ec-3ebd22421324additionals.jpg",
-      "PackagePath": "staticwebassets\\files\\images\\7d13385e-2ef2-49f1-a9ec-3ebd22421324additionals.jpg"
-    },
-    {
-      "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\files\\images\\bc222ffa-244f-415b-92ab-9e05ecb66e85images.jpg",
-      "PackagePath": "staticwebassets\\files\\images\\bc222ffa-244f-415b-92ab-9e05ecb66e85images.jpg"
     },
     {
       "Id": "C:\\Users\\BisanCo\\Desktop\\Ecommerce_Backend\\Ecommerce\\wwwroot\\js\\Product.js",

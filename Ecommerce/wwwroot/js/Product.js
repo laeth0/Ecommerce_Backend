@@ -4,7 +4,7 @@
             "url": "Product/getall",
             "type": "GET",
             "datatype": "json",
-            contentType: "application/json",
+            "contentType": "application/json",
         },
         "columns": [
             { "data": "ProductId" },
@@ -14,7 +14,7 @@
             //{
             //    data: "ProductId",
             //    render: function (data, type, row) {
-                  
+
             //        return `<a href="/Admin/Product/Update/${data.ProductId}" class="btn btn-info mx-2" >
             //                    <i class="far fa-edit"></i> Edit
             //                </a>
@@ -25,5 +25,5 @@
             //}
         ],
     });
-
+    console.log(dataTable.ajaxComplete());
 }

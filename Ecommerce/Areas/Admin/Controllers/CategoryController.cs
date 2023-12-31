@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Ecommerce.BLL;
 using Ecommerce.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.PL
 {
     [Area("Admin")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
@@ -18,21 +20,22 @@ namespace Ecommerce.PL
         }
 
         //Show all categories
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var categories = unitOfWork.CategoryRepository.GetAll();
+            var categories =await unitOfWork.CategoryRepository.GetAll();
             if (categories == null) return BadRequest();
             var mappedCategories = mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(categories);
             return View(mappedCategories);
         }
 
         //Show category products
-        public IActionResult categoryProducts(int CategoryId)
+        public async Task<IActionResult> categoryProducts(int CategoryId)
         {
-            IEnumerable<Product> products = unitOfWork.CategoryRepository.GetCategoryProducts(CategoryId);
+            Category category = await unitOfWork.CategoryRepository.GetById(CategoryId);
+            IEnumerable<Product> products = category.Products;
             if (products == null) return BadRequest();
             var mappedProducts = mapper.Map< IEnumerable<Product> , IEnumerable<ProductViewModel> >(products);
-            var CategoryName = unitOfWork.CategoryRepository.GetById(CategoryId).CategoryName;
+            var CategoryName = (await unitOfWork.CategoryRepository.GetById(CategoryId)).CategoryName;
             ViewBag.CategoryName = CategoryName;
             return View(mappedProducts);
         }
@@ -46,13 +49,13 @@ namespace Ecommerce.PL
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult Create(CategoryViewModel categoryVM)
+        public async Task<IActionResult> Create(CategoryViewModel categoryVM)
         {
             if (ModelState.IsValid)
             {
                 var mappedCategory = mapper.Map<CategoryViewModel, Category>(categoryVM);
-                unitOfWork.CategoryRepository.Add(mappedCategory);
-                unitOfWork.Save();
+                await unitOfWork.CategoryRepository.Add(mappedCategory);
+                await unitOfWork.Save();
                 TempData["Message"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -64,24 +67,24 @@ namespace Ecommerce.PL
 
         // update category
         [HttpGet]
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
             if (id == 0) return BadRequest();
 
-            Category category = unitOfWork.CategoryRepository.GetById(id);
+            Category category =await unitOfWork.CategoryRepository.GetById(id);
             if (category == null) return NotFound();
             var mappedCategory = mapper.Map<Category, CategoryViewModel>(category);
             return View(mappedCategory);
         }
 
         [HttpPost]
-        public IActionResult Update(CategoryViewModel categoryVM)
+        public async Task<IActionResult> Update(CategoryViewModel categoryVM)
         {
             if (ModelState.IsValid)// ModelState is a my model (the class) and IsValid is a property
             {
                 Category mappedCategory = mapper.Map<CategoryViewModel, Category>(categoryVM);
                 unitOfWork.CategoryRepository.Update(mappedCategory);
-                unitOfWork.Save();
+                await unitOfWork.Save();
                 TempData["Message"] = "Category updated successfully";
                 //return RedirectToAction("Index");
                 return RedirectToAction(nameof(Index));// another way to write the above line
@@ -93,10 +96,10 @@ namespace Ecommerce.PL
 
         // delete category
         [HttpGet]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == 0) return BadRequest();
-            Category category = unitOfWork.CategoryRepository.GetById(id);
+            Category category =await unitOfWork.CategoryRepository.GetById(id);
             if (category == null) return NotFound();
             var mappedCategory = mapper.Map<Category, CategoryViewModel>(category);
             return View(mappedCategory);
@@ -104,12 +107,12 @@ namespace Ecommerce.PL
 
 
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteCategories(int id)
+        public async Task<IActionResult> DeleteCategories(int id)
         {
-            Category category = unitOfWork.CategoryRepository.GetById(id);
+            Category category =await unitOfWork.CategoryRepository.GetById(id);
             if (category == null) return NotFound();
             unitOfWork.CategoryRepository.Delete(category);
-            unitOfWork.Save();
+            await unitOfWork.Save();
             TempData["Message"] = "Category deleted successfully";
             return RedirectToAction(nameof(Index));
         }

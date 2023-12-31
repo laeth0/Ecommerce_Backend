@@ -1,0 +1,51 @@
+﻿@model UsersViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create User</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Fname" class="p-0 mb-3"></label>
+            <input asp-for="Fname" class="form-control"  />
+            <span asp-validation-for="Fname" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Lname" class="p-0 mb-3"></label>
+            <input asp-for="Lname" class="form-control" />
+            <span asp-validation-for="Lname" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Email" class="p-0 mb-3"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Roles" class="p-0 mb-3"></label>
+            <select asp-for="Roles" asp-items="@ViewBag.roles" class="form-control" >
+                <option selected disabled >---Select Role---</option>
+            </select>
+            <span asp-validation-for="Roles" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-primary form-control">Create</button>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a asp-controller="Users" asp-action="Index" class="btn btn-success border form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>
+

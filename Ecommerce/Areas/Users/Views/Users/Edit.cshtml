@@ -1,0 +1,45 @@
+﻿@model UsersViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Update User</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 row p-1">
+             <label asp-for="Fname" class="p-0 mb-3"></label> 
+            <input asp-for="Fname" class="form-control" />
+            <span asp-validation-for="Fname" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Lname" class="p-0 mb-3"></label>
+            <input asp-for="Lname" class="form-control" />
+            <span asp-validation-for="Lname" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Email" class="p-0 mb-3"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary form-control">Edit</button>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <a asp-controller="Users" asp-action="Index" class="btn btn-success border form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>
+

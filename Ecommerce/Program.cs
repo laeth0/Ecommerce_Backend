@@ -1,5 +1,7 @@
 using Ecommerce.BLL;
 using Ecommerce.DAL;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.PL
@@ -19,19 +21,34 @@ namespace Ecommerce.PL
 
 
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            //builder.Services.AddScoped<IProductRepository, ProductRepository>();
-            //builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            //builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
             builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
-            //services of lifetime for dependency injection
-            //AddScoped => the object will be created when the request is created and when the request is finished the object will be destroyed
-            //AddSingleton => the will still in memory until the application is running and when the application is closed the object will be destroyed
-            //AddTransient => 
+            builder.Services.AddAutoMapper(m=>
+            {
+                m.AddProfile<UserProfile>();
+                m.AddProfile<ProductProfile>();
+                m.AddProfile<CategoryProfile>();
+            });
 
-            builder.Services.AddAutoMapper(m=> m.AddProfile<ProductProfile>() );
-            builder.Services.AddAutoMapper(m=> m.AddProfile<CategoryProfile>() );
-            builder.Services.AddAutoMapper(m=> m.AddProfile<CustomerProfile>() );
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+            })
+                .AddEntityFrameworkStores<EcommerceDbContext>()
+                .AddDefaultTokenProviders();
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(options =>
+            {
+                options.LoginPath = "/Security/Security/Login";
+            });
+
+
 
             var app = builder.Build();
 
@@ -48,10 +65,10 @@ namespace Ecommerce.PL
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapControllerRoute( name: "default",
-                pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+            app.MapControllerRoute( name: "default",pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
             
             app.Run();
         }

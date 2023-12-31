@@ -2,7 +2,7 @@
 {
     public static class FileManagement
     {
-        public static string? UploadFile(IFormFile file, string FolderName)// => IFormFile is the type of the file that we want to upload
+        public static async Task<string?> UploadFile(IFormFile file, string FolderName)// => IFormFile is the type of the file that we want to upload
         {
 
             if (file == null)
@@ -26,7 +26,7 @@
             using var FileStream = new FileStream(FilePath, FileMode.Create);
 
 
-            file.CopyTo(FileStream);
+            await file.CopyToAsync(FileStream);
             return FileName;
         }   
 

@@ -27,7 +27,6 @@ namespace Ecommerce.PL
 
         public virtual Category? Category { get; set; }
 
-        public virtual ICollection<Customer>? Customers { get; set; }
     }
 
 }

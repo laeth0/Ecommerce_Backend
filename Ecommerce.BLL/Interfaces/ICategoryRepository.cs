@@ -4,8 +4,6 @@ namespace Ecommerce.BLL
 {
     public interface ICategoryRepository:IGenericRepository<Category>
     {
-        IEnumerable<Product> GetCategoryProducts(int Category_id);
-        
     }
 
 }

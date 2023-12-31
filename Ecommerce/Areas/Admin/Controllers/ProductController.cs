@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Ecommerce.BLL;
 using Ecommerce.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Text.Json;
@@ -9,6 +10,7 @@ using System.Text.Json.Serialization;
 namespace Ecommerce.PL
 {
     [Area("Admin")]
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
@@ -22,9 +24,9 @@ namespace Ecommerce.PL
 
         //Show all products
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = unitOfWork.ProductRepository.GetAll();
+            var products =await unitOfWork.ProductRepository.GetAll();
             if (products == null) return BadRequest();
             var mappedProducts = mapper.Map< IEnumerable<Product>, IEnumerable<ProductViewModel> >(products);
             return View(mappedProducts);
@@ -32,9 +34,9 @@ namespace Ecommerce.PL
 
         // create category
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            IEnumerable<Category> categories = unitOfWork.CategoryRepository.GetAll();
+            IEnumerable<Category> categories =await unitOfWork.CategoryRepository.GetAll();
             SelectList selectListItems = new SelectList(categories, "CategoryId", "CategoryName");
             // this is another way to write the above line
             //IEnumerable<SelectListItem> CategorySelectListItems = unitOfWork.CategoryRepository.GetAll()
@@ -50,14 +52,14 @@ namespace Ecommerce.PL
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult Create(ProductViewModel productVM)
+        public async Task<IActionResult> Create(ProductViewModel productVM)
         {
             if (ModelState.IsValid)
             {
-                productVM.ImageURL=FileManagement.UploadFile(productVM.Image,"images");
+                productVM.ImageURL=await FileManagement.UploadFile(productVM.Image,"images");
                 var mappedProduct = mapper.Map<ProductViewModel,Product>(productVM);
-                unitOfWork.ProductRepository.Add(mappedProduct);
-                unitOfWork.Save();
+                await unitOfWork.ProductRepository.Add(mappedProduct);
+                await unitOfWork.Save();
                 TempData["Message"] = "Product created successfully";
                 return RedirectToAction("Index");
             }
@@ -69,14 +71,14 @@ namespace Ecommerce.PL
 
         // update category
         [HttpGet]
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(int id)
         {
             if (id == 0) return BadRequest();
 
-            Product product = unitOfWork.ProductRepository.GetById(id);
+            Product product =await unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
 
-            IEnumerable<Category> categories = unitOfWork.CategoryRepository.GetAll();
+            IEnumerable<Category> categories =await unitOfWork.CategoryRepository.GetAll();
             SelectList selectListItems = new SelectList(categories, "CategoryId", "CategoryName");
             ViewBag.Categories = selectListItems;
             ViewBag.ProductCategorieName = product.Category.CategoryName;
@@ -86,7 +88,7 @@ namespace Ecommerce.PL
         }
 
         [HttpPost]
-        public IActionResult Update(ProductViewModel productVM)
+        public async Task<IActionResult> Update(ProductViewModel productVM)
         {
             if (ModelState.IsValid)// ModelState is a my model (the class) and IsValid is a property
             {
@@ -96,12 +98,12 @@ namespace Ecommerce.PL
                     if ( !string.IsNullOrEmpty(productVM.ImageURL) )
                         FileManagement.DeleteFile(productVM.ImageURL, "images");
 
-                    productVM.ImageURL = FileManagement.UploadFile(productVM.Image, "images");
+                    productVM.ImageURL =await FileManagement.UploadFile(productVM.Image, "images");
                 }
 
                 var mappedProduct = mapper.Map<ProductViewModel, Product>(productVM);
                 unitOfWork.ProductRepository.Update(mappedProduct);
-                unitOfWork.Save();
+                await unitOfWork.Save();
                 TempData["Message"] = "Category updated successfully";
                 //return RedirectToAction("Index");
                 return RedirectToAction(nameof(Index));// another way to write the above line
@@ -112,10 +114,10 @@ namespace Ecommerce.PL
 
         // delete category
         [HttpGet]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == 0) return BadRequest();
-            Product product = unitOfWork.ProductRepository.GetById(id);
+            Product product =await unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
             var mappedProduct = mapper.Map<Product, ProductViewModel>(product);
             return View(mappedProduct);
@@ -123,30 +125,19 @@ namespace Ecommerce.PL
 
 
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteProduct(int id)
+        public async Task<IActionResult> DeleteProduct(int id)
         {
-            Product product = unitOfWork.ProductRepository.GetById(id);
+            Product product =await unitOfWork.ProductRepository.GetById(id);
             if (product == null) return NotFound();
             unitOfWork.ProductRepository.Delete(product);
             FileManagement.DeleteFile(product.ImageURL, "images");
-            unitOfWork.Save();
+            await unitOfWork.Save();
             TempData["Message"] = "Category deleted successfully";
             return RedirectToAction(nameof(Index));
         }
 
 
-        // show customers who by the product 
-        [HttpGet]
-        public IActionResult CustomersWhoByThisProduct(int productId)
-        {
-            var product = unitOfWork.ProductRepository.GetById(productId);
-            if (product == null) return NotFound();
-            var customers = product.Customers;
-            if (customers == null) return NotFound();
-            ViewBag.ProductName = product.ProductName;
-            var mappedCustomers = mapper.Map<IEnumerable<Customer>, IEnumerable<CustomerViewModel>>(customers);
-            return View(mappedCustomers);
-        }
+ 
 
         /* [HttpGet]
          public IActionResult getall()
@@ -154,22 +145,22 @@ namespace Ecommerce.PL
              var products = unitOfWork.ProductRepository.GetAll();
              return Json(new { data = products });
          } */
-        [HttpGet]
-        public IActionResult getAll()
-        {
-            var products = unitOfWork.ProductRepository.GetAll();
+        //[HttpGet]
+        //public async Task<IActionResult> getAll()
+        //{
+        //    var products =await unitOfWork.ProductRepository.GetAll();
 
-            // Create Json Serialize Options with ReferenceHandler.Preserve
-            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
-            {
-                ReferenceHandler = ReferenceHandler.Preserve,
-                // Other options as needed
-            };
+        //    // Create Json Serialize Options with ReferenceHandler.Preserve
+        //    JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+        //    {
+        //        ReferenceHandler = ReferenceHandler.Preserve,
+        //        // Other options as needed
+        //    };
 
-            // Serialize the data using JsonSerializerOptions
-            var jsonData = JsonSerializer.Serialize(new { data = products }, jsonSerializerOptions);
-            return Content(jsonData, "application/json");
-        }
+        //    // Serialize the data using JsonSerializerOptions
+        //    var jsonData = JsonSerializer.Serialize(new { data = products }, jsonSerializerOptions);
+        //    return Content(jsonData, "application/json");
+        //}
 
 
 

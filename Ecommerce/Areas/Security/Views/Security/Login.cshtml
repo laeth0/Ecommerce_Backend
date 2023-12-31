@@ -1,0 +1,32 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_SecurityLayout.cshtml";
+}
+
+<div class="wrapper">
+    <h2>Login</h2>
+    <form asp-action="Login" method="post">
+        @if(TempData["ErrorMessage"] != null)
+        {
+            <div class="text-danger"> @TempData["ErrorMessage"] </div>
+        }
+        <div class="input-box">
+            <input asp-for="Email" type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+            <input asp-for="Password" type="password" placeholder="Create password" required>
+        </div>
+        <div class="policy">
+            <input asp-for="RememberMe" type="checkbox">
+            <h3>Remember Me</h3>
+        </div>
+        <div class="input-box button">
+            <input type="Submit" value="Login">
+        </div>
+        <div class="text">
+            <h3>Dont Have an account ?<a asp-action="Register">Register now</a> </h3>
+            <h3>Forget Password ? <a asp-action="ForgetPassword">Reset Password</a> </h3>
+        </div>
+    </form>
+</div>

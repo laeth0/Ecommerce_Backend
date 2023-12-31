@@ -3,11 +3,11 @@ using Ecommerce.DAL;
 
 namespace Ecommerce.PL
 {
-    public class CustomerProfile : Profile
+    public class CategoryProfile : Profile
     {
-        public CustomerProfile()
+        public CategoryProfile()
         {
-            CreateMap<CustomerViewModel, Customer>().ReverseMap();
+            CreateMap<CategoryViewModel, Category>().ReverseMap();
         }
     }
 }

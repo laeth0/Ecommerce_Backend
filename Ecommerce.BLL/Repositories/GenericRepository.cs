@@ -13,30 +13,30 @@ namespace Ecommerce.BLL
             dbContext = context;
         }
 
-        public T GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            return dbContext.Set<T>().Find(id);
+            return await dbContext.Set<T>().FindAsync(id);
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
             if (typeof(T) == typeof(Product))
             {
-                return (IEnumerable<T>) dbContext.Products.Include(p => p.Category).ToList();
+                return (IEnumerable<T>) await dbContext.Products.Include(p => p.Category).ToListAsync();
             }
-           return dbContext.Set<T>().ToList();
+           return await dbContext.Set<T>().ToListAsync();
         }
 
 
-        public void Add(T entity)
+        public async Task Add(T entity)
         {
-            dbContext.Set<T>().Add(entity);
+           await dbContext.Set<T>().AddAsync(entity);
          
         }
 
         public void Delete(T entity)
         {
-            dbContext.Set<T>().Remove(entity);
+            dbContext.Set<T>().Remove(entity);// => there is no async method for remove
         }
 
 

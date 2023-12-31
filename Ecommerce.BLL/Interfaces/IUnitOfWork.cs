@@ -6,9 +6,8 @@ namespace Ecommerce.BLL
     {
         public ICategoryRepository CategoryRepository { get; set; }
         public IProductRepository ProductRepository { get; set; }
-        public ICustomerRepository CustomerRepository { get; set; }
 
-        public int Save();
+        public Task<int> Save();
 
     }
 }

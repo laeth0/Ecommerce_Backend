@@ -12,11 +12,7 @@ namespace Ecommerce.BLL
             dbContext = context;
         }
 
-        public IEnumerable<Product> GetCategoryProducts(int Category_id)
-        {
-            return dbContext.Categories.FirstOrDefault(c => c.CategoryId == Category_id).Products;
-
-        }
+       
 
     
     }
