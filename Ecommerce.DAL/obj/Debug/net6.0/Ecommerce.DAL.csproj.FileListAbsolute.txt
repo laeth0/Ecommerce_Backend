@@ -34,3 +34,4 @@ C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.DAL\obj\Debug\net6.0\Ecomme
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.DAL\obj\Debug\net6.0\refint\Ecommerce.DAL.dll
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.pdb
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.DAL\obj\Debug\net6.0\ref\Ecommerce.DAL.dll
+C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.DAL\obj\Debug\net6.0\Ecommerce.DAL.sourcelink.json

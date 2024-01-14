@@ -43,3 +43,4 @@ C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.BLL\obj\Debug\net6.0\Ecomme
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.BLL\obj\Debug\net6.0\refint\Ecommerce.BLL.dll
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.pdb
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.BLL\obj\Debug\net6.0\ref\Ecommerce.BLL.dll
+C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce.BLL\obj\Debug\net6.0\Ecommerce.BLL.sourcelink.json

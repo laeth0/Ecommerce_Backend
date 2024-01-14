@@ -409,3 +409,4 @@ C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce\bin\Debug\net6.0\AutoMapper
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\BisanCo\Desktop\Ecommerce_Backend\Ecommerce\obj\Debug\net6.0\Ecommerce.PL.sourcelink.json
